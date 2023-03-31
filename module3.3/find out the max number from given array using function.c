@@ -1,33 +1,28 @@
 // Write a program to find out the max number from given array using function
 
-#include <stdio.h>
 
-int findMax(int arr[], int size);                                    //function declation
-	int N;
-	printf("Enter the number:");
-	scanf("%d", &N);
-
-int arr[N] 
-
-int main() 
+#include<stdio.h>
+int maxnum();
+main()
 {
-    int size = sizeof(arr) / sizeof(arr[0]);
-   
-    int max = findMax(arr, size);                                    //function calling
-    printf("The maximum number in the array is: %d\n", max);
-    return 0;
+     maxnum();
 }
 
-int findMax(int arr[], int size) 									//function defination
+int maxnum()
 {
-	int i;
+	int a[5],i,max=0;
+	
+	for(i=0;i<5;i++)
+	{
+		printf("Enter the number of a[%d] : ",i);
+     	scanf("%d",&a[i]);
+    
 
-    int max = arr[0];
-    for ( i = 1; i < size; i++) {
-        if (arr[i] > max) 
-		{
-            max = arr[i];
-        }
-    }
-    return max;
+	    if(a[i]>max)
+	    {
+	    	max=a[i];
+		}
+	}
+	printf("Max number is : %d",max);
+	 return max;
 }
